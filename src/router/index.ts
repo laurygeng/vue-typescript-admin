@@ -42,6 +42,11 @@ Vue.use(VueRouter)
 */
 export const constantRoutes: RouteConfig[] = [
   {
+    path: '/book',
+    component: () => import(/* webpackChunkName: "login" */ '@/views/book/index.vue'),
+    meta: { hidden: true }
+  },
+  {
     path: '/redirect',
     component: Layout,
     meta: { hidden: true },
